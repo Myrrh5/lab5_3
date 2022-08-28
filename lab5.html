@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let student = [
+            {
+                fullname: 'นายตั้งใจ เรียนมาก', 
+                age: 18, 
+                year: 1,
+                gpa: 3.40,
+                help: true
+            },
+            { 
+                fullname: 'นายส่งงาน ตลอดมา', 
+                age: 19, 
+                year: 2,
+                gpa: 3.00,
+                help: false
+            },
+            {
+                fullname: 'นางสาวใสใจ ดีงาม', 
+                age: 20, 
+                year: 3,
+                gpa: 2.90,
+                help: true
+            },
+            {
+                fullname: 'นายคริสเตียโน่ เมสซี่',
+                age: 21,
+                year: 4,
+                gpa: 2.60,
+                help:true
+            },
+            {
+                fullname: 'นายเท็น อีเลฟเว่น',
+                age: 21,
+                year: 4,
+                gpa: 3.99,
+                help:false
+            },
+            {
+                fullname: 'นายมจพ พจม',
+                age: 19,
+                year: 2,
+                gpa:1.02,
+                help:false
+            },
+            {
+                fullname: 'นายขนม ผักชีผักไปไกล',
+                age: 20,
+                year: 3,
+                gpa:2.90,
+                help:false
+            },
+            {
+                fullname: 'นางสาวโอเค ไม่โอเค',
+                age: 21,
+                year: 4,
+                gpa:4.00,
+                help:false
+            }
+        ]
+        student.sort((a,b) => {
+            return a.year-b.year
+        })
+        for(let x =0; x<student.length;x++){
+            if(student[x].gpa >=3.20){
+                if(student[x].help == true){
+                    console.log('ชั้นปีที่ '+student[x].year)
+                    console.log(student[x].fullname+' เกิดเมื่อ '+ (2565-parseInt(student[x].age))+(' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย'))
+                    console.log('\n')
+                }
+                else{
+                    console.log('ชั้นปีที่ '+student[x].year)
+                    console.log(student[x].fullname+' เกิดเมื่อ '+ (2565-parseInt(student[x].age))+' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์')  
+                    console.log('\n')                 
+                }
+            }else if(student[x].gpa >=2.75 && student[x].year >=2){
+                if(student[x].help == true ){
+                    console.log('ชั้นปีที่ '+student[x].year)
+                    console.log(student[x].fullname+' เกิดเมื่อ '+ (2565-parseInt(student[x].age))+(' ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์และยังช่วยงานภาควิชาด้วย'))   
+                    console.log('\n')
+                }else{
+                    console.log('ชั้นปีที่ '+student[x].year)
+                    console.log(student[x].fullname+' เกิดเมื่อ '+ (2565-parseInt(student[x].age))+(' ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยถึงเกณฑ์เเต่ไม่ได้ช่วยงานภาควิชา'))   
+                    console.log('\n')
+                }       
+            }else{
+                console.log('ชั้นปีที่ '+student[x].year)
+                console.log(student[x].fullname+' เกิดเมื่อ '+ (2565-parseInt(student[x].age))+(' ไม่ได้ทุนการศึกษา เนื่องจากเกรดเฉลี่ยไม่ถึงเกณฑ์'))
+                console.log('\n')
+            }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
